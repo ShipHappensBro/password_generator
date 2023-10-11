@@ -49,6 +49,13 @@ class crypted():
             return(0)
 
 if __name__=="__main__":
-    start=crypted(12)
+    print('Введите длину пароля')
+    inputed_lenght=input()
+    try:
+        inputed_lenght=int(inputed_lenght)
+    except:
+        print('Введено не число')
+        exit()
+    start=crypted(inputed_lenght)
     start.generate()
     start.open_explorer()
